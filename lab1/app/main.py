@@ -1,5 +1,9 @@
 from fastapi import FastAPI
 from starlette.responses import FileResponse 
+import os
+
+script_dir = os.path.dirname(__file__)
+st_abs_file_path = os.path.join(script_dir, "static/")
 
 app = FastAPI()
 
@@ -10,4 +14,4 @@ def read_root():
 
 @app.get("/landing")
 def landing_page():
-    return FileResponse("static/page1.html")
+    return FileResponse(st_abs_file_path + "page1.html")

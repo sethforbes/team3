@@ -13,5 +13,6 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # the app folder into the code/app directory in the container
 COPY ./app /code/app
 
+
 # run the app -- the webapp is in the app folder, called main.py3-3
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]

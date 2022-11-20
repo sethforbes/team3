@@ -2,11 +2,13 @@
 <html lang="en">
 
 <!-- This is an example of embedding a chat widget.  Replace this script with a Dialogflow Agent. -->
-<script type="text/javascript">
-  var cwl_site = "https://www.pqe.io";
-  var cwl_widgetId = "7e692c36-6a43-48ea-9089-9be08743082b";
-  document.getElementsByTagName("head")[0].appendChild(document.createElement('script')).src = cwl_site + "/js/chat/embed_chat.js";
-</script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Credit-card-application"
+  agent-id="6627b01a-3e77-4e7f-93c4-2bc42137b993"
+  language-code="en"
+></df-messenger>
 
   <head>
     <meta charset="utf-8">
